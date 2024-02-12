@@ -1,0 +1,44 @@
+body {padding: 0;margin: 0;background: #f2f6e9;height:2000px;}
+
+/*--- Bar de navigation ---*/
+.navbar {background:#FD7616;}
+.nav-link,.navbar-brand {color: #FFFFFF;cursor: pointer;}
+.nav-link {margin-right: 1em !important;}
+.nav-link:hover {color: #000;}
+.navbar-collapse {justify-content: flex-end;}
+
+/*Page web index haut de page avec image*/
+.header {background-image: url('images/header-background.jpeg');background-size: cover;height:40%;background-position: center;position: relative;}
+.overlay {position: absolute;min-height: 100%;min-width: 100%;left: 0;top: 0;background: rgba(0, 0, 0, 0.6);}
+.description {left: 50%;position: absolute;top: 45%;transform: translate(-50%, -55%);text-align: center;}
+.description h1{font-size: 2em;color: #FD7616;}
+.description p {color: #FFFFFF;font-size: 1.3rem;line-height: 1.5;}
+.description button {border:1px solid #FFFFFF;background:#FC8130;border-radius: 3;color:#FFFFFF;}
+.description button:hover {border:2px solid #FFFFFF;background:#FC8130;color:#FFFFFF;}
+
+
+
+/*Ranger d'activiter + photo marchandise*/
+.features {margin: 4em auto;padding: 1em;position: relative;}
+.feature-title {color: #333;font-size: 1.3rem;font-weight: 700;margin-bottom: 20px;text-transform: uppercase;}
+.features img {-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);-moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);margin-bottom: 16px;}
+
+
+
+.icon-bar a:hover {background-color: #000;}
+.facebook {background: #3B5998;color: white;}
+.twitter {background: #55ACEE;color: white;}
+.instagram {background: #F50C6F;color: white;}
+.snapchat {background: #F5E00C;color: white;}
+.linkedin {background: #4918AD; color: white;}
+
+/*pied de page index*/
+.page-footer {background-color: #262626;color: #ccc;padding: 60px 0 30px;}
+.footer-copyright {color: #666;padding: 60px 0;}
+
+/*galerie*/
+.row {display: flex;flex-wrap: wrap;padding: 0 4px;}
+
+/* Quatre colone egale cote a cote*/
+.column {flex: 25%;max-width: 25%;padding: 0 4px;}
+.column img {margin-top: 8px;vertical-align: middle;width: 100%;}

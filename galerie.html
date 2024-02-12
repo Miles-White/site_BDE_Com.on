@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Favicon et nom du site Web -->
+        <link rel="icon" href="favicon.png">
+        <title>Com'on</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Bootstrap links hosted via CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!--link for specification for navigatino bar -->
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <!--Navigation bar -->
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="/"><strong>BDE Com'on</strong></a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galerie.html">Galerie</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+		
+		<form method="POST" action="getdata.php" enctype="multipart/form-data">
+		<input type="file" name="myimage">
+		<input type="submit" name="submit_image" value="Upload">
+		</form>
+		
+		<form method="POST" action="getdata.php" enctype="multipart/form-data">
+ <input type="file" name="myimage">
+ <input type="submit" name="submit_image" value="Upload">
+</form>
+		<?php
+$host = 'localhost';
+$user = 'root';
+$pass = ' ';
+
+mysql_connect($host, $user, $pass);
+
+mysql_select_db('demo');
+
+$upload_image=$_FILES[" myimage "][ "name" ];
+
+$folder="/xampp/htdocs/images/";
+
+move_uploaded_file($_FILES[" myimage "][" tmp_name "], "$folder".$_FILES[" myimage "][" name "]);
+
+$insert_path="INSERT INTO image_table VALUES('$folder','$upload_image')";
+
+$var=mysql_query($inser_path);
+?>
+		<?php
+$host = 'localhost';
+$user = 'root';
+$pass = ' ';
+
+mysql_connect($host, $user, $pass);
+
+mysql_select_db('demo');
+
+$select_path="select * from image_table";
+
+$var=mysql_query($select_path);
+
+while($row=mysql_fetch_array($var))
+{
+ $image_name=$row["imagename"];
+ $image_path=$row["imagepath"];
+ echo "img src=".$image_path."/".$image_name." width=100 height=100";
+}
+?>
+		
+		
+		
+        <!-- Toutes les photos 
+        <div class="row">
+            <div class="column">
+                <img src="galerie/1.jpg">
+                <img src="galerie/2.jpg">
+                <img src="galerie/3.jpg">
+                <img src="galerie/4.jpg">
+                <img src="galerie/5.jpg">
+                <img src="galerie/6.jpg">
+                <img src="galerie/7.jpg">
+                <img src="galerie/8.jpg">
+            </div>
+            <div class="column">
+                <img src="galerie/9.jpg">
+                <img src="galerie/10.jpg">
+                <img src="galerie/11.jpg">
+                <img src="galerie/12.jpg">
+                <img src="galerie/13.jpg">
+                <img src="galerie/14.jpg">
+                <img src="galerie/15.jpg">
+                <img src="galerie/16.jpg">
+            </div>
+            <div class="column">
+                <img src="galerie/17.jpg">
+                <img src="galerie/18.jpg">
+                <img src="galerie/19.jpg">
+                <img src="galerie/20.jpg">
+                <img src="galerie/21.jpg">
+                <img src="galerie/22.jpg">
+                <img src="galerie/23.jpg">
+            </div>
+            <div class="column">
+                <img src="galerie/24.jpg">
+                <img src="galerie/25.jpg">
+                <img src="galerie/26.jpg">
+                <img src="galerie/27.jpg">
+                <img src="galerie/28.jpg">
+                <img src="galerie/29.jpg">
+                <img src="galerie/30.jpg">
+            </div>
+        </div>  -->
+        
+        <!--jQuery link -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
+        <!--Javascript link -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

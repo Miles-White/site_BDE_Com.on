@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+	
+    <link rel="icon" href="favicon.png"> <!-- image affiché sur la bar de navigation -->
+    <title>Com'on</title> <!-- Nom du site affiché sur la bar de navigation -->
+	
+    <!-- Required meta tags -->
+    <meta charset="utf-8"> <!-- specifies encoding format html -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Defines the screen size -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	
+	<!--link for specification css -->
+        <link rel="stylesheet" type="text/css" href="main.css">
+	
+	<!-- logo for social media-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Bar de Navigation  -->
+        <nav class="navbar navbar-expand-lg">   
+            <a class="navbar-brand" href="index.html"> <img src="favicon.png" width="55" height="45"><strong> BDE Com'on</strong></a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galerie.html">Galerie</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <style>/*mise en page auto*/
+@media (max-width: 575.98px) {
+    .description {left: 0;padding: 0 15px;position: absolute;top: 10%;transform: none;text-align: center;}
+}
+
+/* mise en page auto: 2 colone remplacent 4*/
+@media screen and (max-width: 800px) {
+    .column {flex: 50%;max-width: 50%;}
+}
+
+/*mise en page auto: 2 colone ce superposent*/
+@media screen and (max-width: 600px) {
+    .column {flex: 100%;max-width: 100%;}
+}
+
+</style>
+       
+            
+    <header class="page-header header container-fluid">
+        <div class="overlay"></div>
+             <!--Lien reseau sociaux-->
+             <style>/*--- Social media side bar --*/
+			 .icon-bar {position: fixed;top: 50%;left: 0;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);-moz-transform:none; -o-transform:none; transform: translateY(-50%);z-index: 100;}
+			 .icon-bar a {display: block;text-align: center;padding: 17px;transition: all 0.3s ease;color: white;font-size: 20px;}
+			 
+			 /*-- CHangement de position des liens reseaux sociaux--*/
+			 @media all and (max-width: 699px){
+			 .icon-bar a {display: none;}
+			 }
+</style>
+            <div class="icon-bar">
+                <a href="https://www.facebook.com/BdeComOnRennes2/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+                <a href="https://twitter.com/choopsrennes2" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+                <a href="https://www.instagram.com/bdecomonr2/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+                <a href="snapchat.html" target="_blank" class="snapchat"><i class="fa fa-snapchat"></i></a>
+                <a href="https://www.linkedin.com/company/bde-comon?fbclid=IwAR2sEaCqmT3MIZCyX_GCDs8s35qKrtnRvU4JI6zShd6TEBDyXx_bM6TDuF8" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+        
+            <!--Titre -->
+            <div class="description">
+                <h1>Bureaux des Etudiants Info Com</h1>
+                <p>Un BDE qui rendra vos années à Rennes inoubliables!! <br></p>
+                <a href='https://billetterie.pumpkin-app.com/sweat-2020-2021-comon?fbclid=IwAR1uYY-Gl5-dhGIMxIzH9nN_EaYYdx_L9O0Ir2fzS8YVdsZpfDOkW_YCYAg' target="_blank"><button type="button" class="btn btn-primary btn-lg">Adopte un renard!</button></a>
+                
+            </div>
+        </header>
+        <!--1ere ranger d'activiter -->
+        <br>
+        <br>
+        <!--<h2 style="font-size:60px; font-family:verdana; text-align:center;">Ce qu'on fait</h2>-->
+        <div class="container features">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="feature-title">Voyage</h3>
+                    <img src="images/voyage.png" class="img-fluid" style="width:500px;height:200px;">
+                    <p>Pour organiser le meilleur des voyages à moindre prix pour nos étudiants préférés</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="feature-title">Festivité</h3>
+                    <img src="images/soiree.png" class="img-fluid" style="width:500px;height:200px;">
+                    <p>Pour organiser des soirées rennaises inoubliables</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="feature-title">Gala</h3>
+                    <img src="images/gala.png" class="img-fluid" style="width:500px;height:200px;">
+                    <p>Pour t'en mettre plein la vue.</p>
+                </div>
+            </div>
+            
+            <!-- 2nd ranger d'activiter -->
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h3 class="feature-title">Partenariat</h3>
+                    <img src="images/parteneriat.png" class="img-fluid" style="width:500px;height:250px;">
+                    <p>Pour choper les meilleurs bons plans pour les étudiants.</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h3 class="feature-title">Culturel</h3>
+                    <img src="images/culture.png" class="img-fluid" style="width:500px;height:250px;">
+                    <p>Pour organiser nos journées bowling et concerts.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!--Instagram avec Elfsight-->
+        <!--<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-972d6159-f60d-49cb-8dcf-efe300065f0d"></div> -->        
+        
+        <!--Pied de page -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-10">
+                        <h6 class="text-uppercase font-weight-bold">Adresse</h6>
+                        <p>Université Rennes 2, 35000 Rennes
+                        <br>Local B101</p>
+                    </div>
+                </div>
+                <style>
+                    .link { color: #000000; } /* CSS link color */
+                    .link:hover { color:#000};
+                </style>
+                <div class="footer-copyright text-center">© 2021 Copyright</div>
+            </div> 
+
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
